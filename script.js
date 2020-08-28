@@ -15,17 +15,17 @@ function func(){
 }
 
 function update() {
-	document.getElementById("mn").innerHTML = Math.round(money);
+	document.getElementById("mn").innerHTML = money.round();
 	document.getElementById("sp").innerHTML = increment;
 	document.getElementById("cs").innerHTML = cost;
 	setTimeout(update,10);
 }
 
 function incrs() {
-if (money > cost) { 
-	money.minus(cost);
+if (Decimal.compare(money, cost) > 0) { 
+	money = money.sub(cost);
 	increment = new Decimal(1).plus(increment.pow(1.3)).round();
-	cost = new Decimal(10).plus(increment.pow(1.2)) ;
+	cost = new Decimal(10).plus(increment.pow(1.2)).round() ;
 }
 
 }
