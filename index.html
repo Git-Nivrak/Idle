@@ -35,7 +35,7 @@ function func(){
 }
 
 function update() {
-	document.getElementById("mn").innerHTML = round(money);
+	document.getElementById("mn").innerHTML = Math.round(money);
 	document.getElementById("sp").innerHTML = increment;
 	document.getElementById("cs").innerHTML = cost;
 	setTimeout(update,10);
