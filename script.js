@@ -1,8 +1,7 @@
-var money = 0;
-var increment = 1;
-var cost = 10;
+var money = new Decimal(0);
+var increment = new Decimal(0);
+var cost = new Decimal(10);
 
-var f = new Decimal(1e5);
 
 function pad(num, size) {
     var s = num+"";
@@ -11,7 +10,7 @@ function pad(num, size) {
 }
 
 function func(){
-	money += increment/1000;
+	money = money.plus(increment.divide(1000));
 	setTimeout(func,1);
 }
 
@@ -24,9 +23,9 @@ function update() {
 
 function incrs() {
 if (money > cost) { 
-	money -= cost;
-	increment += 1 + increment ** 1.3;
-	cost = 10 + Math.round(increment ** 1.2)
+	money.minus(cost);
+	increment = Decimal(1).plus(increment.pow(1.3));
+	cost = Decimal(10) + increment.pow(1.2);
 }
 
 }
