@@ -24,8 +24,8 @@ function update() {
 function incrs() {
 if (money > cost) { 
 	money.minus(cost);
-	increment = Decimal(1).plus(increment.pow(1.3)).round();
-	cost = Decimal(10).plus(increment.pow(1.2)) ;
+	increment = new Decimal(1).plus(increment.pow(1.3)).round();
+	cost = new Decimal(10).plus(increment.pow(1.2)) ;
 }
 
 }
