@@ -26,6 +26,7 @@ if (money > cost) {
 	increment += 1 + increments ** 1.3;
 	cost = 10 + Math.round(increment ** 1.2)
 }
+console.log(increment);
 if (increment => 100) { 
 	document.body.innerHTML = "Bruh you're bored";
 }
