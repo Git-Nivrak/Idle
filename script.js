@@ -1,5 +1,5 @@
 
-function game() {
+
 var money = 0;
 var increment = 1;
 var cost = 10;
@@ -36,5 +36,5 @@ if (increment => 100) {
 
 func();
 update();
-}
-game();
+
+
