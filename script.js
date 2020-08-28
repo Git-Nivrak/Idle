@@ -1,5 +1,5 @@
 var money = new Decimal(0);
-var increment = new Decimal(0);
+var increment = new Decimal(1);
 var cost = new Decimal(10);
 
 
@@ -25,7 +25,7 @@ function incrs() {
 if (money > cost) { 
 	money.minus(cost);
 	increment = Decimal(1).plus(increment.pow(1.3)).round;
-	cost = Decimal(10).plus(increment.pow(1.2));
+	cost = Decimal(10).plus(increment.pow(1.2)) ;
 }
 
 }
