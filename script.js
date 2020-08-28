@@ -23,7 +23,7 @@ function update() {
 function incrs() {
 if (money > cost) { 
 	money -= cost;
-	increment += 1 + increments ** 1.3;
+	increment += 1 + increment ** 1.3;
 	cost = 10 + Math.round(increment ** 1.2)
 }
 
