@@ -1,4 +1,4 @@
-import { Decimal } from './break_infinity.js'
+import { Decimal } from './break_infinity.js-master/dist/break_infinity.js'
 
 var money = 0;
 var increment = 1;
