@@ -1,5 +1,3 @@
-import { Decimal } from './break_infinity.js-master'
-
 var money = 0;
 var increment = 1;
 var cost = 10;
