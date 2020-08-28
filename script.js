@@ -15,9 +15,9 @@ function func(){
 }
 
 function update() {
-	document.getElementById("mn").innerHTML = money.round();
-	document.getElementById("sp").innerHTML = increment;
-	document.getElementById("cs").innerHTML = cost;
+	document.getElementById("mn").innerHTML = money.mantissa + "e" + money.exponent;
+	document.getElementById("sp").innerHTML = increment.matissa + "e" + increment.exponent;
+	document.getElementById("cs").innerHTML = cost.mantissa + "e" + cost.exponent;
 	setTimeout(update,10);
 }
 
