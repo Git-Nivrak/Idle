@@ -30,12 +30,12 @@ function pad(num, size) {
 }
 
 function func(){
-	money += round(increment/1000);
+	money += increment/1000;
 	setTimeout(func,1);
 }
 
 function update() {
-	document.getElementById("mn").innerHTML = money;
+	document.getElementById("mn").innerHTML = round(money);
 	document.getElementById("sp").innerHTML = increment;
 	document.getElementById("cs").innerHTML = cost;
 	setTimeout(update,10);
