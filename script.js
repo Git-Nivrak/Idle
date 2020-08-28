@@ -2,6 +2,8 @@ var money = 0;
 var increment = 1;
 var cost = 10;
 
+var f = new Decimal(1e5);
+
 function pad(num, size) {
     var s = num+"";
     while (s.length < size) s = "0" + s;
