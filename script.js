@@ -15,9 +15,24 @@ function func(){
 }
 
 function update() {
-	document.getElementById("mn").innerHTML = money.mantissa.toFixed(2) + "e" + money.exponent;
-	document.getElementById("sp").innerHTML = increment.mantissa.toFixed(2) + "e" + increment.exponent;
-	document.getElementById("cs").innerHTML = cost.mantissa.toFixed(2) + "e" + cost.exponent;
+	if (money.exponent > 4) {
+		document.getElementById("mn").innerHTML = money.mantissa.toFixed(2) + "e" + money.exponent;
+	}
+	else {
+		document.getElementById("mn").innerHTML = money.floor();
+	}
+	if (cost.exponent > 4) {
+		document.getElementById("cs").innerHTML = cost.mantissa.toFixed(2) + "e" + money.exponent;
+	}
+	else {
+		document.getElementById("cs").innerHTML = cost.floor();
+	}
+	if (increment.exponent > 4) {
+		document.getElementById("sp").innerHTML = increment.mantissa.toFixed(2) + "e" + money.exponent;
+	}
+	else {
+		document.getElementById("sp").innerHTML = increment.floor();
+	}
 	setTimeout(update,10);
 }
 
