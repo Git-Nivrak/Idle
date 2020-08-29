@@ -15,9 +15,9 @@ function func(){
 }
 
 function update() {
-	document.getElementById("mn").innerHTML = money.mantissa + "e" + money.exponent;
-	document.getElementById("sp").innerHTML = increment.mantissa + "e" + increment.exponent;
-	document.getElementById("cs").innerHTML = cost.mantissa + "e" + cost.exponent;
+	document.getElementById("mn").innerHTML = money.mantissa.toFixed(2) + "e" + money.exponent;
+	document.getElementById("sp").innerHTML = increment.mantissa.toFixed(2) + "e" + increment.exponent;
+	document.getElementById("cs").innerHTML = cost.mantissa.toFixed(2) + "e" + cost.exponent;
 	setTimeout(update,10);
 }
 
